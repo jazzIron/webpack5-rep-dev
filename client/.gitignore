@@ -1,0 +1,14 @@
+
+
+### testing ###
+/coverage
+
+### yarn ###
+# Zero-Install 사용
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
