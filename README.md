@@ -6,8 +6,8 @@
 ## Features ✏
 
 - 스토리북 설정
-- react & typescript 통한 아토믹 디자인 구현
-- 스토리북을 통한 시각화 작업
+ - react & typescript 통한 아토믹 디자인 구현
+ - 스토리북을 통한 시각화 작업
 
 
 
