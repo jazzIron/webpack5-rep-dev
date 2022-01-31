@@ -1,4 +1,4 @@
 export function Test() {
   console.log('test item');
-  return <div>hello</div>;
+  return <div className="test">hello</div>;
 }

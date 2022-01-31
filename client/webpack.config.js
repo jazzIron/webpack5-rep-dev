@@ -21,7 +21,14 @@ module.exports = {
     // 확장자를 순서대로 해석
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
     alias: {
-      '@src': path.resolve(__dirname, './src'),
+      '@src': path.resolve(__dirname, 'src/'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@features': path.resolve(__dirname, 'src/features'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@layout': path.resolve(__dirname, 'src/layout'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
   optimization: {
