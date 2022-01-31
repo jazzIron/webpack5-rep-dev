@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:7.16.7"],
             ["@babel/preset-typescript", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:7.16.7"],
             ["@emotion/babel-plugin", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:11.7.2"],
+            ["@emotion/core", "npm:11.0.0"],
             ["@emotion/react", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:11.7.1"],
             ["@emotion/styled", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:11.6.0"],
             ["@mdx-js/react", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:1.6.22"],
@@ -2833,6 +2834,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/core", "npm:10.3.1"]
           ],
           "linkType": "SOFT",
+        }],
+        ["npm:11.0.0", {
+          "packageLocation": "./.yarn/cache/@emotion-core-npm-11.0.0-03ccf93fb4-d9beeff0c1.zip/node_modules/@emotion/core/",
+          "packageDependencies": [
+            ["@emotion/core", "npm:11.0.0"]
+          ],
+          "linkType": "HARD",
         }],
         ["virtual:1c855c5b316123534b8fe6f34ec7d0b74459501b2ec65a992f89d96a22931e3f94424d09f3abe6b792593e879b7713bd6f3c847b13da98f87d7fb88b483eb53b#npm:10.3.1", {
           "packageLocation": "./.yarn/__virtual__/@emotion-core-virtual-1338b379b6/0/cache/@emotion-core-npm-10.3.1-5d0bd2504d-d2dad428e1.zip/node_modules/@emotion/core/",
@@ -22546,6 +22554,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:7.16.7"],
             ["@babel/preset-typescript", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:7.16.7"],
             ["@emotion/babel-plugin", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:11.7.2"],
+            ["@emotion/core", "npm:11.0.0"],
             ["@emotion/react", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:11.7.1"],
             ["@emotion/styled", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:11.6.0"],
             ["@mdx-js/react", "virtual:890a412905064bad98607746985f213a912d631195594cc0f2e3fe354adf6bdb38e8c0489fa5d5ed8c4a6b7a1309c31d6badfc4b7424bcbb62138ebfba0863d1#npm:1.6.22"],
