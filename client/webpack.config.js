@@ -21,7 +21,7 @@ module.exports = {
     // 확장자를 순서대로 해석
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
     alias: {
-      '@src': path.resolve(__dirname, '/src'),
+      '@src': path.resolve(__dirname, './src'),
     },
   },
   optimization: {
@@ -67,10 +67,12 @@ module.exports = {
   plugins: [
     new webpack.BannerPlugin({
       banner: `
-          Build Date: ${new Date().toLocaleString()}
-          `,
+        Build Date: ${new Date().toLocaleString()}
+        Commit Version: ${childProcess.execSync('git rev-parse --short HEAD')},
+        Author: ${childProcess.execSync('git config user.name')}
+      `,
     }),
-    // css 파일과 js파일을 각각 html파일의 link태그, script태그로 추가
+    //css 파일과 js파일을 각각 html파일의 link태그, script태그로 추가
     new HtmlWebpackPlugin({
       template: './src/index.html',
       templateParameters: {
