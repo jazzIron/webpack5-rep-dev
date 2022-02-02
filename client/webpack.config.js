@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 이전 빌드
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 여러 css파일을 하나의 css 파일로 병합
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //  HTML 파일 생성을 단순화
 const TerserPlugin = require('terser-webpack-plugin'); // console.log 제거 옵션
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'); // ts-loader의 성능을 향상
 
 const mode = process.env.NODE_ENV || 'development';
 
@@ -51,7 +52,15 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          'babel-loader',
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(sa|sc|c)ss$/i,
@@ -99,6 +108,7 @@ module.exports = {
       banner: `build time : ${new Date().toLocaleTimeString()}`,
       cleanStaleWebpackAssets: false,
     }),
+    new ForkTsCheckerWebpackPlugin(),
     // javascript css 뽑기(개발환경에는 필요가없음)
     // loader 설정이 추가로 필요함
     ...(process.env.NODE_ENV === 'production'

@@ -14,7 +14,7 @@
     "build2": "cross-env NODE_ENV=development webpack serve  --config webpack.config.common.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test:coverage": "cross-env jest --watchAll=false --coverage",
+    "test": "cross-env jest --watchAll=false --coverage",
     "test:generate-output": "cross-env jest --json --outputFile=.jest-test-results.json || true",
     "cypress:start:app": "cross-env BROWSER=none react-scripts -r @cypress/instrument-cra start",
     "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
