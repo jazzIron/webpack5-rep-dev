@@ -14,7 +14,8 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "react-app/jest"
     ],
     "rules": {
         "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -27,5 +28,24 @@
         "react": {
             "version": "detect"
         }
-    }
+    },
+    "overrides": [
+        {
+            "extends": [
+                "plugin:cypress/recommended"
+            ],
+            "files": [
+                "cypress/**/*"
+            ],
+            "rules": {}
+        },
+        {
+            "files": [
+                "**/*.stories.*"
+            ],
+            "rules": {
+                "import/no-anonymous-default-export": "off"
+            }
+        }
+    ]
 }

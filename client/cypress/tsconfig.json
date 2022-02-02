@@ -1,0 +1,11 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "isolatedModules": false,
+        "noEmit": true,
+        // jest types와 충돌을 피하기 위해 명시적으로 작성
+        "types": [
+            "cypress"
+        ]
+    },
+}

@@ -6,4 +6,4 @@ export const isProd = mode === 'production';
 export const isDev = !isProd;
 export const rootDir = path.join(__dirname, '../../');
 export const webpackDir = path.join(__dirname, '../');
-export const defaultPort = 8080;
+export const defaultPort = 3000;
