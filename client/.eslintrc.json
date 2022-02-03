@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "cypress/globals": true
     },
     "parser": "@typescript-eslint/parser",
     "plugins": [
@@ -35,9 +36,12 @@
                 "plugin:cypress/recommended"
             ],
             "files": [
-                "cypress/**/*"
+                "cypress/**/*.ts"
             ],
-            "rules": {}
+            "rules": {
+                "isolatedModules": false,
+                "noEmit": true
+            }
         },
         {
             "files": [

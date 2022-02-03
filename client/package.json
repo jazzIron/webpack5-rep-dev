@@ -9,18 +9,17 @@
     "dev": "webpack serve --config ./webpack/webpack.config.dev.js --progress",
     "start": "cross-env NODE_ENV=development webpack serve",
     "start2": "cross-env NODE_ENV=production webpack serve --config webpack.config.common.js",
-    "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=development webpack --progress",
     "build2": "cross-env NODE_ENV=development webpack serve  --config webpack.config.common.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "cross-env jest --watchAll=false --coverage",
     "test:generate-output": "cross-env jest --json --outputFile=./jest/jest-test-results.json || true",
-    "cypress:start:app": "cross-env BROWSER=none webpack serve @cypress/instrument-cra start",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cypress:run",
+    "cypress:start:app": "cross-env BROWSER=none NODE_ENV=development webpack serve",
     "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
-    "cypress:open": "yarn cypress:start:wait -- \"cypress open\"",
-    "cypress:run": "yarn cypress:start:wait -- \"cypress run\"",
-    "cypress:open2": "cypress open"
+    "cypress:open": "cypress:start:wait -- \"cypress open\"",
+    "cypress:run": "cypress:start:wait -- \"cypress run\""
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",

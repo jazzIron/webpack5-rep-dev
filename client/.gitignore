@@ -16,6 +16,7 @@
 # cypress
 cypress/videos
 cypress/screenshots
+cypress/log
 .nyc_output
 
 ### yarn ###

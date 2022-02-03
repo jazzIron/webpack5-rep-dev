@@ -26,11 +26,9 @@
     },
     "typeRoots": [
         "node_modules/@types",
-        "src/@type"
     ],
     "include": [
         "./src/**/*",
-        "@type",
         "jest.config.js"
     ]
 }

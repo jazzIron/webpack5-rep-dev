@@ -3,6 +3,11 @@
       "testFiles": "**/*.cy.test.{js,ts,jsx,tsx}",
       "componentFolder": "src"
     },
+    "env": {
+      "cypress-react-selector": {
+        "root": "#root"
+      }
+    },
     "defaultCommandTimeout": 10000,
     "videoRecording": false,
     "baseUrl": "http://localhost:3000",
@@ -11,3 +16,5 @@
     "supportFile": "./cypress/support/index.js",
     "pluginsFile": "./cypress/plugins/index.js"
   }
+
+ 
