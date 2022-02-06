@@ -16,6 +16,7 @@ module.exports = () => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name]_bundle.js',
+      assetModuleFilename: 'assets/images/[name][ext]',
       clean: true,
     },
     optimization: {
@@ -59,14 +60,6 @@ module.exports = () => {
             },
           ],
         },
-        // {
-        //   test: /\.(png|jpe?g|gif|woff|woff2|ttf|svg|ico)$/i,
-        //   loader: 'url-loader',
-        //   options: {
-        //     name: '[name].[ext]?[hash]', // hash 처리(캐시)
-        //     limit: 20000, // 2kb 최대
-        //   },
-        // },
         {
           test: /\.(png|jpe?g|gif)$/i,
           type: 'asset/resource',

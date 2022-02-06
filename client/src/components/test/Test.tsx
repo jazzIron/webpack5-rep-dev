@@ -1,4 +1,3 @@
-// import bannerItem from '@assets/images/typescriptBanner.png';
 import bannerItem from '@assets/images/tsBanner.png';
 import background from '@assets/images/background.jpg';
 

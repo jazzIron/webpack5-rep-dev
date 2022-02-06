@@ -1,0 +1,19 @@
+# Build Stage Start
+FROM node:16-slim as builder
+
+# Specify a working directory
+WORKDIR /usr/app
+
+# yarn install 캐싱을 위한  package*.json 따로 카피
+COPY package*.json ./
+
+#Install dependencies
+RUN yarn
+
+# 소스복사
+COPY . .
+
+EXPOSE 3000
+
+# react 실행
+CMD ["yarn", "start"]

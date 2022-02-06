@@ -1,0 +1,29 @@
+version: "3.7"
+
+services: # 컨테이너들 정의
+  nginx: # 컨테이너 이름
+    restart: "on-failure" # 리스타트 정책 no, always, on-failure, unless-stopped
+    container_name: "Nginx"
+    build:
+      dockerfile: Dockerfile
+      context: ./Nginx
+    volumes:
+      - ./Nginx/logs:/var/log/nginx
+    ports:
+      - "8080:80" # 호스트 포트:컨테이너 포트
+
+  webpack5-dev: # 컨테이너 이름
+    restart: "on-failure"
+    container_name: "webpack5-dev"
+    build: client # client 디렉토리 하위에 Dockerfile을 사용
+    ports:
+      - "${REACT_FRONT_PORT}:3000"
+    volumes: # 실시간 코드 수정을 위한 volumes 설정
+      - "/usr/app/node_modules"
+      - "./client:/usr/app" # 소스 디렉토리 공유
+    env_file:
+      - .env
+    environment:
+      - CHOKIDAR_USEPOLLING=true # HMR을 위해 필요한 설정
+    stdin_open: true # react-script 3.4.1 부터 필요
+    tty: true

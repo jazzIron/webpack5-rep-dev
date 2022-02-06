@@ -3,7 +3,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Themes } from './theme';
 import './App.scss';
 import { Test } from '@components/test/Test';
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from './theme/GlobalStyle';
 
 function App(): ReactElement {
   return (
