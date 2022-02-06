@@ -5,6 +5,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
+  devtool: 'source-map',
+  output: {
+    filename: '[name].[contenthash].bundle.js',
+  },
   optimization: {
     minimizer: [
       new OptimizeCSSAssetsPlugin(),

@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //  HTML 파일 생성
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
+  output: {
+    filename: '[name].bundle.js',
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),

@@ -14,9 +14,16 @@ module.exports = () => {
   const commonConfig = {
     entry: './src/index.tsx',
     output: {
-      path: path.join(__dirname, './dist'),
-      filename: 'bundle.js',
-      publicPath: '/',
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name]_bundle.js',
+      clean: true,
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        name: 'chunk-vendors',
+        cacheGroups: { default: false, defaultVendors: false },
+      },
     },
     performance: {
       hints: false,
@@ -52,13 +59,38 @@ module.exports = () => {
             },
           ],
         },
+        // {
+        //   test: /\.(png|jpe?g|gif|woff|woff2|ttf|svg|ico)$/i,
+        //   loader: 'url-loader',
+        //   options: {
+        //     name: '[name].[ext]?[hash]', // hash 처리(캐시)
+        //     limit: 20000, // 2kb 최대
+        //   },
+        // },
         {
-          test: /\.(png|jpe?g|gif|woff|woff2|ttf|svg|ico)$/i,
-          loader: 'url-loader',
-          options: {
-            name: '[name].[ext]?[hash]', // hash 처리(캐시)
-            limit: 20000, // 2kb 최대
+          test: /\.(png|jpe?g|gif)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'static/[name][ext]',
           },
+        },
+        {
+          test: /\.(svg|ico)$/i,
+          type: 'asset/inline',
+          generator: {
+            dataUrl: (content) => {
+              content = content.toString();
+              return svgToMiniDataURI(content);
+            },
+          },
+        },
+        {
+          test: /\.(woff|woff2|ttf|otf)$/i,
+          type: 'asset/inline',
+        },
+        {
+          test: /\.txt/i,
+          type: 'asset/source',
         },
       ],
     },

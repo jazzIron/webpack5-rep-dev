@@ -25,10 +25,12 @@
         "allowSyntheticDefaultImports": true, //default export가 없는 모듈에서 default imports를 허용
     },
     "typeRoots": [
-        "node_modules/@types",
+        "./node_modules/@types",
+        "./src/@types"
     ],
     "include": [
         "./src/**/*",
+        "./eslintrc.js",
         "jest.config.js"
     ]
 }
