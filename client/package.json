@@ -16,10 +16,7 @@
     "test": "cross-env jest --watchAll=false --coverage",
     "test:generate-output": "cross-env jest --json --outputFile=./jest/jest-test-results.json || true",
     "test:e2e": "start-server-and-test start http://localhost:3000 cypress:run",
-    "cypress:start:app": "cross-env BROWSER=none NODE_ENV=development webpack serve",
-    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
-    "cypress:open": "cypress:start:wait -- \"cypress open\"",
-    "cypress:run": "cypress:start:wait -- \"cypress run\""
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -68,6 +65,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "cypress": "^9.4.1",
+    "cypress-react-selector": "^2.3.15",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
