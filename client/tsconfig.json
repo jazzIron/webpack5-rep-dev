@@ -3,12 +3,12 @@
     "compilerOptions": {
         "outDir": "./dist",
         "target": "es6",
+        "module": "esnext", //모듈 코드 생성 지정
         "lib": [
             "dom",
             "dom.iterable",
             "esnext"
         ],
-        "module": "esnext", //모듈 코드 생성 지정
         "moduleResolution": "node", //모듈 해석 방법 결정
         "jsx": "react-jsx",
         "jsxImportSource": "@emotion/react",

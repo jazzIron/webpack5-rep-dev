@@ -3,14 +3,16 @@
   "packageManager": "yarn@3.1.1",
   "version": "1.0.0",
   "main": "main",
-  "author": "jazz.Iron <57489807+LeeJaeChul@users.noreply.github.com>",
-  "license": "ISC",
+  "author": "jazziron",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jazzIron/webpack5-rep-dev"
+  },
   "scripts": {
-    "dev": "webpack serve --config ./webpack/webpack.config.dev.js --progress",
-    "start": "cross-env NODE_ENV=development webpack serve",
-    "start2": "cross-env NODE_ENV=production webpack serve --config webpack.config.common.js",
-    "build": "cross-env NODE_ENV=development webpack --progress",
-    "build2": "cross-env NODE_ENV=development webpack serve  --config webpack.config.common.js",
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "start": "cross-env NODE_ENV=production webpack serve",
+    "build": "cross-env NODE_ENV=production webpack --progress",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "cross-env jest --watchAll=false --coverage",
