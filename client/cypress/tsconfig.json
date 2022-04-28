@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        // jest types와 충돌을 피하기 위해 명시적으로 작성
+        "types": [
+            "cypress",
+            "@testing-library/cypress",
+            "cypress-react-selector"
+        ],
+    },
+    "include": [
+        "./**/*.ts"
+    ]
+}

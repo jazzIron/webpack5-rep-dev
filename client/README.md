@@ -83,11 +83,20 @@ yarn storybook
 
 ### jest 실행
 ``` bash
-yarn test:coverage
+# jest 실행 --coverage option default
+yarn test
+
+# jest output 생성
+yarn test:generate-output
 ```
 
 ### cypress 실행
 ``` bash
+# e2e test
+yarn test:e2e
+
+# cypress open
+yarn start 
 yarn cypress:open
 ```
 

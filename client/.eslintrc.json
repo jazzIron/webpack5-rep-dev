@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "cypress/globals": true
     },
     "parser": "@typescript-eslint/parser",
     "plugins": [
@@ -14,7 +15,8 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "react-app/jest"
     ],
     "rules": {
         "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -27,5 +29,27 @@
         "react": {
             "version": "detect"
         }
-    }
+    },
+    "overrides": [
+        {
+            "extends": [
+                "plugin:cypress/recommended"
+            ],
+            "files": [
+                "cypress/**/*.ts"
+            ],
+            "rules": {
+                "isolatedModules": false,
+                "noEmit": true
+            }
+        },
+        {
+            "files": [
+                "**/*.stories.*"
+            ],
+            "rules": {
+                "import/no-anonymous-default-export": "off"
+            }
+        }
+    ]
 }
